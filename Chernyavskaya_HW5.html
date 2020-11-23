@@ -13225,7 +13225,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>I am taking a horizontal slice through the data at true signal = 10. My zero-mean Gaussian background does not mess with the mean of the observed data, as can be seen from the graph.</p>
+<p>I am taking a horizontal slice through the data at true signal = 10. My zero-mean Gaussian background does not mess with the mean of the observed data, as can be seen from the graph. The probability density is that of observing a signal given a true signal of 10. For example, given the true signal of 10, we have a probability of 0.006 to observe a signal of 10, and a probability of 0.001 of observing a signal strength 5.</p>
 <h2 id="Problem-1c">Problem 1c<a class="anchor-link" href="#Problem-1c">&#182;</a></h2><p>Select an observed data value and plot  𝑃(𝑠|𝑑) . (Use a stair style plot). Label your plot and clearly explain what you are plotting and how to interpret it.</p>
 
 </div>
@@ -13281,7 +13281,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Here, we are taking a vertical slice through the data at observed signal = 10.</p>
+<p>Here, we are taking a vertical slice through the data at observed signal = 10. Again, the zero-mean Gaussian background does not mess with the mean of the true signal, as can be seen from the graph. The probability density is that of having true signals given an observed signal of 10. For example, given an observed signal of 10, we have a probability of 0.006 to have a true signal of 10, and a probability of 0.001 of a true signal strength 5.</p>
 <h2 id="Problem-2">Problem 2<a class="anchor-link" href="#Problem-2">&#182;</a></h2><p>Now repeat the above, but with a background with non-zero mean. The easiest way would be to still have Gaussian distribution but with a non-zero mean. [Hint: move it by at least a couple of  𝜎 ]. Reproduce the graphs above. Lastly overplot the  𝑃(𝑑|𝑠)  and  𝑃(𝑠|𝑑)  plots. Why are they not centered on the same value? Explain carefully.</p>
 
 </div>
@@ -13404,7 +13404,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>I am taking a horizontal slice through the data at true signal = 10. My non-zero-mean Gaussian background moves the mean of the observed data 10 to the right, as can be seen from the graph.</p>
+<p>I am taking a horizontal slice through the data at true signal = 10. My non-zero-mean Gaussian background moves the mean of the observed data 10 to the right, as can be seen from the graph. The meaning of the graph overall stays the same as 1b.</p>
 <h2 id="Problem-2c">Problem 2c<a class="anchor-link" href="#Problem-2c">&#182;</a></h2><p>Select an observed data value and plot  𝑃(𝑠|𝑑) . (Use a stair style plot). Label your plot and clearly explain what you are plotting and how to interpret it.</p>
 
 </div>
@@ -13460,7 +13460,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Here, we are taking a vertical slice through the data at observed signal = 10, and the highest probability is right at 10, and it decreases all the time.</p>
+<p>Here, we are taking a vertical slice through the data at observed signal = 10, and the highest probability is right at 10, and it decreases all the time. The meaning is the same as 1c, the shape is just different.</p>
 <h2 id="Overplots">Overplots<a class="anchor-link" href="#Overplots">&#182;</a></h2>
 </div>
 </div>
@@ -13515,6 +13515,14 @@ div#notebook {
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The plots aren't centered the same because the background distributions are centered at different means. One is at zero, and the other at 10. This is the shift we see in the 2D histograms, and it reflects in the horizontal and vertical slices we took of the data, which is what these plots are.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
